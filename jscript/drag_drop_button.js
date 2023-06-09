@@ -45,11 +45,6 @@ function handleFiles(files) {
 
       // Append the image to the image container
       imageContainer.appendChild(img);
-
-      // Add click event listener to display the image in a modal
-      img.addEventListener("click", function () {
-        displayImageModal(this.src);
-      });
     }
   }
 }
@@ -65,25 +60,4 @@ function revokeObjectURL() {
 // Clean up the object URLs when leaving the page
 window.addEventListener("beforeunload", function () {
   revokeObjectURL();
-});
-
-// Display the clicked image in a modal
-function displayImageModal(src) {
-  // Get the modal element
-  var modal = document.getElementById("image-modal");
-
-  // Get the modal image element
-  var modalImage = document.getElementById("modal-image");
-
-  // Set the source of the modal image
-  modalImage.src = src;
-
-  // Show the modal
-  modal.style.display = "block";
-}
-
-// Close the modal when the user clicks on it
-var modal = document.getElementById("image-modal");
-modal.addEventListener("click", function () {
-  modal.style.display = "none";
 });
