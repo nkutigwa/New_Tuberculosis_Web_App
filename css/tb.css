@@ -445,3 +445,49 @@ li, ol {
 
 
 } /*Close Media Query*/
+
+#drag-drop-container {
+	width: 500px; /* Adjust the width as desired */
+	height: 300px; /* Adjust the height as desired */
+	border: 2px dashed #ccc;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto; /* Center align the container */
+  }
+  
+  #drag-drop-zone {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	cursor: pointer;
+  }
+  
+  #drag-drop-zone i {
+	font-size: 48px;
+	margin-bottom: 10px;
+  }
+  
+  #drag-drop-zone p {
+	margin: 0;
+  }
+  
+  .file-label {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #337ab7;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+  }
+  
+  .file-label input[type="file"] {
+	display: none;
+  }
+  
+  

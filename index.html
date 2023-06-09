@@ -66,7 +66,9 @@ and is wrapped around the whole page content. -->
 <!-- Top Bar -->
 <div class='w3-center'>
 	<h1 class="w3-text-green bground-color"> <strong>Tuberculosis Detection App </strong></h1>
-	<p class="space-letters-large w3-medium w3-tag bground-color w3-text-teal w3-border w3-round"> <b>Upload the chest x-ray images, and then obtain the result for TB presence.</b> </p>
+	<p class="space-letters-large w3-medium w3-tag bground-color w3-text-teal" style="text-align: justify; width: 75%;"> 
+		<b>AI Powered web app that detect Tuberculosis from the chest x-ray images.</b> 
+	    <b>upload chest x-ray images and then get the results of Tuberculosis presence</b> </p>
 </div>
 
 
@@ -87,13 +89,26 @@ and is wrapped around the whole page content. -->
 
 
 <!-- Button -->
-<div id="btnn" class="w3-center">
+
+<!-- <div id="btnn" class="w3-center">
 	
 	<button class="w3-btn w3-light-blue w3-hover-green w3-round w3-margin-bottom adjust-spacing btn-font w3-padding w3-space-letters w3-text-white" onclick="setTimeout(simulateClick.bind(null, 'image-selector'), 200)"><i class='fas fa-camera w3-padding-right' style='font-size:15px'></i>
 		<b>Click here to upload your chest x-ray images</b></button>
-	<!--<p class="w3-text-teal">jpeg or png</p>-->
-</div> 
+</div>  -->
 
+<div id="drag-drop-container" class="w3-center">
+	<div id="drag-drop-zone">
+	  <i class="fas fa-cloud-upload-alt"></i>
+	  <p>Drag and drop your files here or</p>
+	  <label for="file-input" class="file-label">
+		<input type="file" id="file-input" multiple onclick="simulateClick('file-input')">
+		Select Files
+	  </label>
+	</div>
+	<p class="w3-text-teal">JPEG or PNG</p>
+  </div>
+  <div id="image-container"></div>
+  
 
 
 <!-- <div class="w3-center">
@@ -147,6 +162,7 @@ text-color space-letters bottom-margin dont-break-out">
 	<script src="jscript/target_classes.js"></script>
 	<script src="jscript/app_startup_code.js"></script>
 	<script src="jscript/app_batch_prediction_code.js"></script>
+	<script src="drag_drop_button.js"></script>
 	
 		
 </div> <!-- w3-content -->
